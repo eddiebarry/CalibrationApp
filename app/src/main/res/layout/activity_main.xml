@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="30dp"
+    android:layout_marginRight="30dp"
+    tools:context=".MainActivity"
+    android:theme="@android:style/Theme.NoTitleBar">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="51dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/captureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|center_vertical"
+            android:layout_margin="20dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            tools:layout_editor_absoluteX="659dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/captureBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top|center_vertical"
+            android:layout_margin="20dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_always_landscape_portrait"
+            tools:layout_editor_absoluteX="659dp"
+            tools:layout_editor_absoluteY="177dp" />
+
+        <View
+            android:id="@+id/rectview1"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@drawable/my_border"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="500px"
+            android:layout_marginLeft="500px"
+            android:layout_marginRight="500px"
+            android:alpha=".5"
+            />
+        <View
+            android:id="@+id/rectview2"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@drawable/my_border1"
+            android:layout_marginTop="700px"
+            android:layout_marginBottom="50px"
+            android:layout_marginLeft="500px"
+            android:layout_marginRight="500px"
+            android:alpha=".5"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="TextView" />
+    </FrameLayout>
+</RelativeLayout>
