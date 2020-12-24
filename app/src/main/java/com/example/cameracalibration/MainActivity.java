@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         Width = frameLayout.getWidth();
         Height = frameLayout.getHeight();
+
+        Log.i("TAG", "W: " + Width + ", H: " + Height + ")");
+
         Margins1[0]=margin+500;
         Margins1[1]=margin+10;
         Margins1[2]=margin+500;
@@ -128,6 +131,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    public void onResume(Bundle savedInstanceState){
+        Log.i("TAG", "in resume W: " + Width + ", H: " + Height + ")");
+    }
+
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -135,6 +144,22 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = (FrameLayout)findViewById(R.id.frameLayout);
         Width = frameLayout.getWidth();
         Height = frameLayout.getHeight();
+
+        Margins1[0]=((margin+500)*Width)/2005;
+        Margins1[1]=((margin+10)*Height/1015);
+        Margins1[2]=((margin+500)*Width)/2005;
+        Margins1[3]=((margin+600)*Height/1015);
+        Margins2[0]=((margin+500)*Width)/2005;
+        Margins2[1]=((margin+600)*Height)/1015;
+        Margins2[2]=((margin+500)*Width)/2005;
+        Margins2[3]=((margin+10)*Height)/1015;
+
+        params.setMargins(Margins1[0],Margins1[1],Margins1[2],Margins1[3]);
+        rectView1.setLayoutParams(params);
+
+        params1.setMargins(Margins2[0],Margins2[1],Margins2[2],Margins2[3]);
+        rectView2.setLayoutParams(params1);
+
     }
 
     private View.OnTouchListener handleTouch = new View.OnTouchListener() {
